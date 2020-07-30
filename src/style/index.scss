@@ -1,0 +1,19 @@
+@mixin flex($value: space-between, $align:center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $value;
+}
+
+@mixin borderBox($padding) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: $padding;
+}
+
+@mixin column($value:center) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: $value;
+}
+$headersHeight: 60px;

@@ -1,0 +1,16 @@
+import { post } from '@/plugin/axios'
+import { ToolSearchParams, ToolSearchResult } from './interface'
+// import { LoginData, LoginParams } from '@/interface'
+
+// 比价查询接口
+export const postToolSearch = (
+  data: ToolSearchParams
+): Promise<ToolSearchResult> => post('tools/index', data)
+
+// 登录
+// export const login = (data: LoginParams): Promise<LoginData> =>
+// post('/user/login', data)
+//   // 获取qiniuyun的token
+//   getToken: _ => http.get('/user/getQiniuToken'),
+//   // 删除qiniu文件
+//   delFile: key => http.delete(`/user/delQiniuFile/${key}`)
