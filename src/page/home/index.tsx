@@ -1,5 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator'
-import Com from './com'
+import Com from './component/com'
 
 @Component({
     components: {
