@@ -38,7 +38,10 @@ const router = new Router({
       path: '/',
       redirect: '/home'
     },
-    ...files.keys().map(item => files(item).default).filter(item => item),
+    ...files
+      .keys()
+      .map(item => files(item).default)
+      .filter(item => item)
   ]
 })
 // router.beforeEach((to, from, next) => {

@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Warn, Error, ErrorStatus } from './util'
 import Cookies from 'js-cookie'
 const http = axios.create({
-  baseURL: `${process.env.VUE_APP_BASE_URL}`,
+  baseURL: `${process.env.VUE_APP_BASE_URL}`
 })
 
 http.interceptors.request.use(
@@ -19,7 +19,7 @@ http.interceptors.request.use(
 http.interceptors.response.use(
   response => {
     const {
-      data: { data, code, message },
+      data: { data, code, message }
     } = response
     if (code === 0) return data
     const token = Cookies.get('token')

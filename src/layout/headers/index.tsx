@@ -20,7 +20,7 @@ type Documents = Document & {
 const dropdownItem = [
   'http://cdns.cherish553.cn/back.jpg',
   'http://cdns.cherish553.cn/back1.jpg',
-  'http://cdns.cherish553.cn/back2.jpeg',
+  'http://cdns.cherish553.cn/back2.jpeg'
 ]
 
 @Component
@@ -86,15 +86,13 @@ export default class Headers extends Vue {
               style.fs20,
               style.mr20
             )}
-            onClick={!full ? fullScreen : exitScreen}
-          ></i>
+            onClick={!full ? fullScreen : exitScreen}></i>
           {/* 用户信息&退出按钮 */}
           <el-popover
             popperClass="center"
             placement="bottom"
             width="150"
-            trigger="click"
-          >
+            trigger="click">
             <el-button onClick={logout} size="mini" type="danger">
               退出登录
             </el-button>

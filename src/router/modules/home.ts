@@ -8,8 +8,8 @@ const home = {
       path: '/',
       name: `${pre}`,
       component: () => import('@/page/home/index.tsx'),
-      meta: { title: 'home' },
-    },
-  ])('home'),
+      meta: { title: 'home' }
+    }
+  ])('home')
 }
 export default home

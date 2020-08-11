@@ -8,8 +8,8 @@ const about = {
       path: '/',
       name: `${pre}`,
       component: () => import('@/page/about/index.tsx'),
-      meta: { title: 'about' },
-    },
-  ])('about'),
+      meta: { title: 'about' }
+    }
+  ])('about')
 }
 export default about

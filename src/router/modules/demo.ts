@@ -8,8 +8,8 @@ const demo = {
       path: '/',
       name: `${pre}`,
       component: () => import('@/page/demo/index.vue'),
-      meta: { title: 'demo' },
-    },
-  ])('demo'),
+      meta: { title: 'demo' }
+    }
+  ])('demo')
 }
 export default demo
