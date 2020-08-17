@@ -1,24 +1,23 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
-// import { Component as tsc } from 'vue-tsx-support'
-
-// interface Props {
-//     title?: string
-//     content?: string
-// }
 
 @Component
 export default class DiaLog extends Vue {
+    // 标题
     @Prop({ required: false, default: 'tit' })
     readonly title?: string
 
+    // 内容
     @Prop({ required: false, default: 'content' })
     readonly content?: string
 
+    // 点击确定后的回调函数
     @Prop({ required: false, default: () => { } })
     readonly success?: Function
 
+    // dialog显示状态
     private dialogVisible: boolean = true
 
+    // 确定
     private determine(): void {
         this.dialogVisible = false
         if (typeof this.success === 'function') {
