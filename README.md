@@ -37,6 +37,7 @@ chore：不属于以上类型的其他类型
 5. `@babel/preset-env` `babel-plugin-component` 支持 element-ui 按需引入
 6. `classnames` 方便操作多类名情况
 7. `vuex-class-modules` vuex class 版（支持装饰器）
+8. `vue-create-api` 让 Vue 组件通过 API 方式调用
 
 ## 项目目录介绍
 
@@ -52,6 +53,7 @@ chore：不属于以上类型的其他类型
 10. store 放置 vuex
 11. global.d.ts 全局公共 interface 等
 12. libs 放置非业务逻辑全局配置
+13. common 放置使用createApi创建的全局公用组件
 
 ## 项目具体语法实例（对应 vue 语法）
 

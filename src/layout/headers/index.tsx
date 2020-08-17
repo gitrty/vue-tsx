@@ -16,12 +16,6 @@ type Documents = Document & {
   webkitCancelFullScreen: Function
   msExitFullscreen: Function
 }
-// 选择模式
-const dropdownItem = [
-  'http://cdns.cherish553.cn/back.jpg',
-  'http://cdns.cherish553.cn/back1.jpg',
-  'http://cdns.cherish553.cn/back2.jpeg'
-]
 
 @Component
 export default class Headers extends Vue {
@@ -80,20 +74,6 @@ export default class Headers extends Vue {
         <h2>后台管理</h2>
         {/* 右侧内容 */}
         <div class={style.headerRight}>
-          {/* 选择主题 */}
-          {/* <el-dropdown onCommand={changeMode} class={style.mr20}>
-            <el-button type="primary" size="mini">
-              选择主题
-              <i class="el-icon-arrow-down el-icon--right"></i>
-            </el-button>
-            <el-dropdown-menu slot="dropdown">
-              {dropdownItem.map((item, index) => (
-                <el-dropdown-item key={item} command={index}>
-                  <img class="dropdownImg" src={item} />
-                </el-dropdown-item>
-              ))}
-            </el-dropdown-menu>
-          </el-dropdown> */}
           {/* 全屏控制按钮 */}
           <i
             class={classnames(

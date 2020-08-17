@@ -9,14 +9,14 @@ export default class HelloWorld extends Vue {
   // Declared as component data
   message = 'Hello World!'
   created() {
-    // console.log(123)
+    // console.info(123)
     this.chifan()
   }
   get newMessage() {
     return this.message + 'cherish'
   }
   chifan: Chifan = () => {
-    // console.log(45)
+    // console.info(45)
     return '123'
   }
 }
