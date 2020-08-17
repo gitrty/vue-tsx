@@ -26,15 +26,28 @@ const dropdownItem = [
 @Component
 export default class Headers extends Vue {
   full = false
+
   // 退出登录
   logout() {
-    user.removeUserAction()
-    jump('login')
+    (this as any).$getDynamicComponent('Dialog', () => {
+      (this as any).$createDialog({
+        $props: {
+          title: '退出',
+          content: '确定要退出吗',
+          success: () => {
+            user.removeUserAction()
+            jump('login')
+          }
+        }
+      }).show()
+    })
   }
+
   // 修改主题
   changeMode(index: number) {
     return index
   }
+
   // 全屏
   fullScreen() {
     this.full = true
@@ -46,6 +59,7 @@ export default class Headers extends Vue {
       el.msRequestFullscreen
     if (typeof rfs !== 'undefined' && rfs) rfs.call(el)
   }
+
   // 退出全屏
   exitScreen() {
     this.full = false
@@ -57,6 +71,7 @@ export default class Headers extends Vue {
       doc.msExitFullscreen
     if (typeof rfs !== 'undefined' && rfs) rfs.call(document)
   }
+  
   render() {
     const { full, changeMode, fullScreen, exitScreen, logout } = this
     return (

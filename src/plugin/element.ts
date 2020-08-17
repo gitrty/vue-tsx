@@ -17,7 +17,8 @@ import {
   Submenu,
   MenuItemGroup,
   Row,
-  Col
+  Col,
+  Dialog
 } from 'element-ui'
 export default {
   install(Vue: VueConstructor) {
@@ -38,6 +39,7 @@ export default {
       .use(MenuItemGroup)
       .use(Row)
       .use(Col)
+      .use(Dialog)
   }
 }
 Vue.prototype.$message = Message

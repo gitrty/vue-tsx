@@ -2,6 +2,9 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const Dashboard = require('webpack-dashboard');
+// const dashboard = new Dashboard();
+// const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   lintOnSave: false,
@@ -65,7 +68,9 @@ module.exports = {
         failOnError: false,
         cache: true,
         fix: true
-      })
+      }),
+      // devServer 下的构建图
+      // new DashboardPlugin(dashboard.setData)
     ],
     optimization: {
       // js、css压缩器 - webpack4取消了内置的压缩器

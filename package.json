@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve --mode development",
-    "start": "vue-cli-service serve  --mode development",
+    "dev": "vue-cli-service serve --mode development --quiet",
+    "start": "vue-cli-service serve  --mode development --quiet",
     "build": "vue-cli-service build  --mode production",
     "lint": "vue-cli-service lint --fix"
   },
@@ -59,7 +59,9 @@
     "stylelint-webpack-plugin": "^2.1.0",
     "typescript": "~3.9.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-create-api": "^0.2.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-dashboard": "^3.2.0"
   },
   "husky": {
     "hooks": {

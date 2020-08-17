@@ -6,6 +6,7 @@ import 'vue-tsx-support/enable-check'
 import element from '@/plugin/element'
 import filter from '@/filter'
 import directive from '@/directive'
+import './common'
 
 Vue.config.productionTip = false
 
