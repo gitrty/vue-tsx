@@ -99,7 +99,7 @@ module.exports = {
       })
     ],
     optimization: {
-      // js、css压缩器 - webpack4取消了内置的压缩器
+      // js、css压缩器
       minimizer: [
         new UglifyJsPlugin({
           cache: true,
