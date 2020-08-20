@@ -18,7 +18,7 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
-    }
+    },
     // proxy: {
     //   '/api': {
     //     // target: process.env.VUE_APP_PROXY_URL,
@@ -29,7 +29,7 @@ module.exports = {
     // },
   },
   css: {
-    sourceMap: false, // 是否在构建样式地图，false将提高构建速度
+    sourceMap: false, // 是否在构建样式地图，false将提高构建速度(默认false)
     loaderOptions: {
       // 全局scss文件
       scss: {
@@ -37,8 +37,10 @@ module.exports = {
       }
     }
   },
+  // 是否为 Babel 或 TypeScript 使用 thread-loader。该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
+  parallel: require("os").cpus().length > 1,
   // 基本URL
-  publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   // 静态资源目录
   assetsDir: 'assets',
   // 生产环境的 source map，false将提高构建速度
@@ -59,7 +61,7 @@ module.exports = {
         // plugin: '@/plugin/*',
         // components: '@/components/*',
       },
-      extensions: ['.tsx', '.js', '.vue', '.json', '.ts']
+      extensions: ['.tsx', '.js', '.vue', '.json', '.ts'],
     },
     plugins: [
       // new MiniCssExtractPlugin({
