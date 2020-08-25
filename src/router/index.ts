@@ -29,10 +29,12 @@ function push(
 Router.prototype.push = push
 
 const files = require.context('./modules', false, /\.ts$/)
-// console.info(...files.keys().map(item => files(item).default).filter(item => item))
 
 Vue.use(Router)
+
 const router = new Router({
+  // @ts-ignore
+  scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/',
